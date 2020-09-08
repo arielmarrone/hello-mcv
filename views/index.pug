@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  h1 Hello MVC
+  p Ingresá el ID del usuario que querés buscar.
+  hr
+  pre= users
+  if users
+    table.table.table-striped
+      thead.thead-dark
+        th id
+        th Nombre
+        th Email
+        th Cumpleaños
+        th Edad
+      tbody
+  else
+    h3 No hay resultados
+  hr
+  h4 Más info en
+    a(href='#') MDN
