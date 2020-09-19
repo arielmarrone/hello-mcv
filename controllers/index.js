@@ -1,7 +1,5 @@
-// controllers/index.js
 const User = require('../models/User');
 
-// controllers/index.js
 exports.home = (req, res) => {
   User.find().sort('id').exec((err, users) => {
     for (let user of users) {
@@ -11,7 +9,6 @@ exports.home = (req, res) => {
   });
 };
 
-// controllers/index.js
 exports.search = (req, res) => {
   let result = null;
   User.findOne({ id: req.query.id }).exec((err, user) => {
